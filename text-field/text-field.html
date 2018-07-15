@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TextField</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="text-field.css">
+</head>
+
+<body>
+
+    <!-- Standard -->
+    <div class="text-field-container">
+        <div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+            <input class="mdc-text-field__input" type="text" id="input">
+            <label for="input" class="mdc-floating-label">Input Label</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <p id="username-helper-text" class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+
+    <!-- Box -->
+    <div class="text-field-container">
+        <div class="mdc-text-field mdc-text-field--box" data-mdc-auto-init="MDCTextField">
+            <input class="mdc-text-field__input" type="text" id="input">
+            <label for="input" class="mdc-floating-label">Input Label</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+    <!-- Outlined -->
+    <div class="text-field-container">
+        <div class="mdc-text-field mdc-text-field--outlined" data-mdc-auto-init="MDCTextField">
+            <input class="mdc-text-field__input" type="text" id="input">
+            <label for="input" class="mdc-floating-label">Input Label</label>
+            <div class="mdc-notched-outline">
+                <svg>
+                    <path class="mdc-notched-outline__path" d="M69.25,1h117.55a4,4 0 0 1 4,4v43.6a4,4 0 0 1 -4,4h-181.6a4,4 0 0 1 -4,-4v-43.6a4,4 0 0 1 4,-4h5.8"></path>
+                </svg>
+            </div>
+            <div class="mdc-notched-outline__idle"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+
+    <!-- Box With Leading Icon -->
+    <div class="text-field-container">
+        <div class="mdc-text-field mdc-text-field--box mdc-text-field--with-leading-icon  mdc-text-field--upgraded mdc-ripple-upgraded"
+            data-mdc-auto-init="MDCTextField">
+            <i class="material-icons mdc-text-field__icon">event</i>
+            <input class="mdc-text-field__input" type="text" id="input">
+            <label for="input" class="mdc-floating-label">Input Label</label>
+            <div class="mdc-line-ripple"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+    <!-- Box With Trailing Icon -->
+    <div class="text-field-container">
+        <div class="mdc-text-field text-field mdc-text-field--box mdc-text-field--with-trailing-icon mdc-text-field--upgraded mdc-ripple-upgraded"
+            data-mdc-auto-init="MDCTextField">
+            <input type="text" id="text-field--trailing-box" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="text-field--trailing-box">Standard</label>
+            <i class="material-icons mdc-text-field__icon">delete</i>
+            <div class="mdc-line-ripple" style="transform-origin: 85px center 0px;"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+
+    <!-- Outlined With Leading Icon -->
+    <div class="text-field-container">
+        <div class="mdc-text-field text-field mdc-text-field--outlined mdc-text-field--with-leading-icon mdc-text-field--upgraded"
+            data-mdc-auto-init="MDCTextField">
+            <i class="material-icons mdc-text-field__icon">event</i>
+            <input type="text" id="text-field--leading-outlined" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="text-field--leading-outlined">Standard</label>
+            <div class="mdc-notched-outline">
+                <svg>
+                    <path class="mdc-notched-outline__path" d="M69.25,1h156.54999999999998a4,4 0 0 1 4,4v43.6a4,4 0 0 1 -4,4h-220.6a4,4 0 0 1 -4,-4v-43.6a4,4 0 0 1 4,-4h5.8"></path>
+                </svg>
+            </div>
+            <div class="mdc-notched-outline__idle"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+
+    <!-- Outlined With Trailing Icon -->
+    <div class="text-field-container">
+        <div class="mdc-text-field text-field mdc-text-field--outlined mdc-text-field--with-trailing-icon mdc-text-field--upgraded"
+            data-mdc-auto-init="MDCTextField">
+            <input type="text" id="text-field--trailing-outlined" class="mdc-text-field__input">
+            <label class="mdc-floating-label" for="text-field--trailing-outlined">Standard</label>
+            <i class="material-icons mdc-text-field__icon">delete</i>
+            <div class="mdc-notched-outline">
+                <svg>
+                    <path class="mdc-notched-outline__path" d="M69.25,1h156.54999999999998a4,4 0 0 1 4,4v43.6a4,4 0 0 1 -4,4h-220.6a4,4 0 0 1 -4,-4v-43.6a4,4 0 0 1 4,-4h5.8"></path>
+                </svg>
+            </div>
+            <div class="mdc-notched-outline__idle"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+    <!-- Textarea -->
+    <div class="text-field-container">
+        <div class="mdc-text-field  mdc-text-field--textarea mdc-text-field--upgraded" data-mdc-auto-init="MDCTextField">
+            <textarea id="text-field--textarea" class="mdc-text-field__input"></textarea>
+            <label class="mdc-floating-label" for="text-field--textarea">Standard</label>
+            <div class="mdc-line-ripple" style="transform-origin: 141px center 0px;"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+
+    <!-- Full Width -->
+    <div class="text-field-container">
+        <div class="mdc-text-field  mdc-text-field--fullwidth mdc-text-field--upgraded" data-mdc-auto-init="MDCTextField">
+            <input type="text" id="text-field-fullwidth" placeholder="Standard" class="mdc-text-field__input">
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+    <!-- Textarea Full Width -->
+    <div class="text-field-container">
+        <div class="mdc-text-field text-field mdc-text-field--textarea mdc-text-field--fullwidth mdc-text-field--upgraded" data-mdc-auto-init="MDCTextField">
+            <textarea id="text-field--textarea" class="mdc-text-field__input"></textarea>
+            <label class="mdc-floating-label" for="text-field--textarea">Standard</label>
+            <div class="mdc-line-ripple" style="transform-origin: 141px center 0px;"></div>
+        </div>
+        <p class="mdc-text-field-helper-text" aria-hidden="true">
+            This will be displayed on your public profile
+        </p>
+    </div>
+
+    <script src="https://unpkg.com/material-components-web@0.37.0/dist/material-components-web.min.js"></script>
+    <script type="text/javascript">
+        window.mdc.autoInit();
+    </script>
+</body>
+
+</html>
