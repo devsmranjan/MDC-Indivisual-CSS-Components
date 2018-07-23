@@ -45,7 +45,7 @@
 <body class="mdc-typography">
 
     <div class="mdc-card demo-card">
-        <div class="mdc-card__primary-action mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple" tabindex="0">
+        <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
             <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div>
             <div class="demo-card__primary">
                 <h2 class="demo-card__title mdc-typography--headline6">Our Changing Planet</h2>
@@ -55,7 +55,7 @@
         </div>
     </div>
     <div class="mdc-card demo-card">
-        <div class="mdc-card__primary-action mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple" tabindex="0">
+        <div class="mdc-card__primary-action mdc-ripple-upgraded" tabindex="0">
             <div class="demo-card__primary">
                 <h2 class="demo-card__title mdc-typography--headline6">Our Changing Planet</h2>
                 <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Kurt Wagner</h3>
@@ -65,8 +65,8 @@
 
         <div class="mdc-card__actions">
             <div class="mdc-card__action-buttons">
-                <button class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init="MDCRipple">Read</button>
-                <button class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init="MDCRipple">Bookmark</button>
+                <button class="mdc-button mdc-card__action mdc-card__action--button" >Read</button>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">Bookmark</button>
             </div>
             <div class="mdc-card__action-icons">
                 <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
@@ -76,7 +76,7 @@
     </div>
 
     <div class="mdc-card demo-card">
-        <div class="mdc-card__primary-action mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple" tabindex="0">
+        <div class="mdc-card__primary-action mdc-ripple-upgraded"  tabindex="0">
             <div class="demo-card__primary">
                 <h2 class="demo-card__title mdc-typography--headline6">Our Changing Planet</h2>
                 <h3 class="demo-card__subtitle mdc-typography--subtitle2">by Kurt Wagner</h3>
@@ -85,18 +85,26 @@
         </div>
 
         <div class="mdc-card__actions mdc-card__actions--full-bleed">
-            <a class="mdc-button mdc-card__action mdc-card__action--button" data-mdc-auto-init="MDCRipple" href="#">
+            <a class="mdc-button mdc-card__action mdc-card__action--button" href="#">
                 All Business Headlines
                 <i class="material-icons" aria-hidden="true">arrow_forward</i>
             </a>
         </div>
     </div>
-
-
-
     <script src="https://unpkg.com/material-components-web@0.37.0/dist/material-components-web.min.js"></script>
     <script type="text/javascript">
-        window.mdc.autoInit();
+        var cardPrimaryAction = document.querySelectorAll('.mdc-card__primary-action');
+        var buttons = document.querySelectorAll('.mdc-button');
+        var iconButtons = document.querySelectorAll('.mdc-icon-button');
+        cardPrimaryAction.forEach(function (item) {
+            mdc.ripple.MDCRipple.attachTo(item);
+        });
+        buttons.forEach(function (item) {
+            mdc.ripple.MDCRipple.attachTo(item);
+        });
+        iconButtons.forEach(function (item) {
+            mdc.ripple.MDCRipple.attachTo(item).unbounded = true;
+        });
     </script>
 </body>
 

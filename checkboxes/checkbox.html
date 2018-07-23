@@ -13,7 +13,7 @@
 <body>
     <div class="mdc-form-field">
         <div class="mdc-checkbox ">
-            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1"  />
+            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1" />
             <div class="mdc-checkbox__background">
                 <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
                     <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
@@ -23,6 +23,19 @@
         </div>
         <label for="checkbox-1">Checkbox 1</label>
     </div>
+    <div class="mdc-form-field">
+        <div class="mdc-checkbox ">
+            <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-2" />
+            <div class="mdc-checkbox__background">
+                <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                </svg>
+                <div class="mdc-checkbox__mixedmark"></div>
+            </div>
+        </div>
+        <label for="checkbox-2">Checkbox 2</label>
+    </div>
+
 
     <div class="mdc-checkbox mdc-checkbox--disabled">
         <input type="checkbox" id="basic-disabled-checkbox" class="mdc-checkbox__native-control" disabled />
@@ -38,7 +51,14 @@
 
     <script src="https://unpkg.com/material-components-web@0.37.0/dist/material-components-web.min.js"></script>
     <script type="text/javascript">
-        window.mdc.autoInit();
+        var formField = document.querySelectorAll('.mdc-form-field');
+        var checkBox = document.querySelectorAll('.mdc-checkbox');
+        formField.forEach(function (item) {
+            mdc.form-field.MDCFormField.attachTo(item);
+        });
+        checkBox.forEach(function (item) {
+            mdc.checkbox.MDCCheckbox.attachTo(item);
+        });
     </script>
 </body>
 

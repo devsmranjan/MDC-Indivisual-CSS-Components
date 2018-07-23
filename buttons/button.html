@@ -18,39 +18,42 @@
 
 <body>
     <div class="button-container">
-        <button class="mdc-button" data-mdc-auto-init="MDCRipple">
+        <button class="mdc-button">
             Button
         </button>
         <button class="mdc-button mdc-button--dense  mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Dense</button>
-        <button class="demo-button mdc-button undefined mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">
+        <button class="demo-button mdc-button undefined mdc-ripple-upgraded">
             <i class="material-icons mdc-button__icon">favorite</i>Icon</button>
     </div>
 
     <div class="button-container">
         <button class="mdc-button mdc-button--raised mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Default</button>
         <button class="mdc-button mdc-button--dense mdc-button--raised mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Dense</button>
-        <button class=" mdc-button mdc-button--raised mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">
+        <button class=" mdc-button mdc-button--raised mdc-ripple-upgraded">
             <i class="material-icons mdc-button__icon">favorite</i>Icon</button>
     </div>
 
     <div class="button-container">
         <button class="mdc-button mdc-button--unelevated mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Default</button>
         <button class="mdc-button mdc-button--dense mdc-button--unelevated mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Dense</button>
-        <button class="mdc-button mdc-button--unelevated mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">
+        <button class="mdc-button mdc-button--unelevated mdc-ripple-upgraded">
             <i class="material-icons mdc-button__icon">favorite</i>Icon</button>
     </div>
 
     <div class="button-container">
         <button class="mdc-button mdc-button--outlined mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Default</button>
         <button class="mdc-button mdc-button--dense mdc-button--outlined mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">Dense</button>
-        <button class="mdc-button mdc-button--outlined mdc-ripple-upgraded" data-mdc-auto-init="MDCRipple">
+        <button class="mdc-button mdc-button--outlined mdc-ripple-upgraded">
             <i class="material-icons mdc-button__icon">favorite</i>Icon</button>
     </div>
 
 
     <script src="https://unpkg.com/material-components-web@0.37.0/dist/material-components-web.min.js"></script>
     <script type="text/javascript">
-        window.mdc.autoInit();
+        var buttons = document.querySelectorAll('.mdc-button');
+        buttons.forEach(function (item) {
+            mdc.ripple.MDCRipple.attachTo(item);
+        });
     </script>
 </body>
 
